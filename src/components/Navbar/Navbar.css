@@ -1,8 +1,50 @@
+.navbar {
+  padding: 0px;
+  margin: 0px;
+  background-color: #09090b;
+  height: 100vh;
+  width: 70px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  
+
+  border-right: 1px solid rgba(83, 83, 83, 0.486);
+}
+.navLogo > img {
+  width: 60px;
+  height: 60px;
+
+}
+
+ul {
+  padding: 0px;
+}
+
 li {
-    text-decoration: none;
-    list-style: none;
+  text-decoration: none;
+  list-style: none;
+}
+.navLinks a,
+.navLinksSocial a {
+  color: white;
+}
+
+.navLinks a > svg {
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+}
+.navLinksSocial a > svg {
+    width: 20px;
+    height: 20px;
+    padding: 20px;
     
 }
-.navLinks a, .navLinksSocial a {
-    color: white;
-}
+

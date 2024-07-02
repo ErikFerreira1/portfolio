@@ -1,28 +1,79 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faHome, faInfoCircle, faProjectDiagram } from "@fortawesome/free-solid-svg-icons";
+import {
+  BiBookAlt,
+  BiHomeAlt,
+  BiLogoGithub,
+  BiLogoInstagramAlt,
+  BiLogoLinkedin,
+  BiUserCircle,
+} from "react-icons/bi";
+import {
+  MdWorkOutline,
+} from "react-icons/md";
+import logo from "../../assets/perfil.jpg";
 import "./Navbar.css";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navLogo">
-        <img src="#" alt="Logo" />
+        <img src={logo} alt="Logo" />
       </div>
       <div>
         <ul className="navLinks">
-          <li><Link to="/"><FontAwesomeIcon icon={faHome} /> </Link></li>
-          <li><Link to="/about"><FontAwesomeIcon icon={faInfoCircle} /> </Link></li>
-          <li><Link to="/projects"><FontAwesomeIcon icon={faProjectDiagram} /> </Link></li>
+          <li>
+            <Link to="/">
+              <BiHomeAlt />{" "}
+            </Link>
+          </li>
+          <li>
+            <Link to="/profile">
+              <BiUserCircle />{" "}
+            </Link>
+          </li>
+          <li>
+            <Link to="/portfolio">
+              <MdWorkOutline />{" "}
+            </Link>
+          </li>
+          <li>
+            <Link to="/publications">
+              <BiBookAlt />{" "}
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="social">
         <ul className="navLinksSocial">
-          <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} /> </a></li>
-          <li><a href="https://www.github.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /> </a></li>
-          <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /> </a></li>
+          <li>
+            <a
+              href="https://www.github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BiLogoGithub />{" "}
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BiLogoLinkedin />{" "}
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BiLogoInstagramAlt />{" "}
+            </a>
+          </li>
+          
         </ul>
       </div>
     </nav>
