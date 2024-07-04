@@ -8,7 +8,7 @@ const Background = () => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     const stars = [];
-    const numStars = 500;
+    const numStars = 400;
     const speed = 0.1;
 
     const setCanvasSize = () => {
@@ -22,7 +22,7 @@ const Background = () => {
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           radius: Math.random() * 1.5,
-          speed: Math.random() * speed + 0.5,
+          speed: Math.random() * speed,
         });
       }
     };

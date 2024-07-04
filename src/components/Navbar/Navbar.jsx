@@ -11,7 +11,7 @@ import {
 import {
   MdWorkOutline,
 } from "react-icons/md";
-import logo from "../../assets/perfil.jpg";
+import logo from "../../assets/perfil.png";
 import "./Navbar.css";
 
 const Navbar = () => {

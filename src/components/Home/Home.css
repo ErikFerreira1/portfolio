@@ -1,3 +1,80 @@
-div {
-    color: white;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+main {
+}
+.titleHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+
+  text-transform: uppercase;
+  color: white;
+}
+.titleHome > h1 {
+    width: 660px;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 0px;
+}
+.titleHome > h2 {
+  font-weight: 500;
+  font-size: 50px;
+  margin: 0px;
+}
+.titleHome > h3 {
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+
+  width: 34vw;
+  margin: 0px;
+}
+.titleHome > h2 > strong,
+.titleHome > h3 > strong {
+  font-weight: 500;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    to left,
+    #71717a 20%,
+    #b3b3b3 40%,
+    #f2f2f2 60%,
+    #71717a 80%
+  );
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 2s linear infinite;
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projectHome {
+  width: 40vw;
+  height: 42vh;
+}
+
+.projectHome > a > img {
+  width: 790px;
+  height: 400px;
 }
