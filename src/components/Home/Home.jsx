@@ -10,6 +10,7 @@ const Home = () => {
       </div>
       <article>
         <div className="projectHome">
+          <h1>ÚLTIMO PROJETO</h1>
           <a href="#"><img src={imgProject} alt="" /></a>
         </div>
       </article>

@@ -1,0 +1,12 @@
+.titleProject {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+.titleProject > h1 {
+    font-size: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+}

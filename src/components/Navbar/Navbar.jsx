@@ -24,22 +24,26 @@ const Navbar = () => {
         <ul className="navLinks">
           <li>
             <Link to="/">
-              <BiHomeAlt />{" "}
+              <BiHomeAlt />
+              <span className="tooltip">Home</span>
             </Link>
           </li>
           <li>
-            <Link to="/profile">
-              <BiUserCircle />{" "}
+            <Link to="../About">
+              <BiUserCircle />
+              <span className="tooltip">Sobre mim</span>
             </Link>
           </li>
           <li>
-            <Link to="/portfolio">
-              <MdWorkOutline />{" "}
+            <Link to="/Projects">
+              <MdWorkOutline />
+              <span className="tooltip">Projetos</span>
             </Link>
           </li>
           <li>
             <Link to="/publications">
-              <BiBookAlt />{" "}
+              <BiBookAlt />
+              <span className="tooltip">Publicações</span>
             </Link>
           </li>
         </ul>
@@ -52,7 +56,8 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <BiLogoGithub />{" "}
+              <BiLogoGithub />
+              <span className="tooltip">GitHub</span>
             </a>
           </li>
           <li>
@@ -61,7 +66,8 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <BiLogoLinkedin />{" "}
+              <BiLogoLinkedin />
+              <span className="tooltip">LinkedIn</span>
             </a>
           </li>
           <li>
@@ -70,10 +76,10 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <BiLogoInstagramAlt />{" "}
+              <BiLogoInstagramAlt />
+              <span className="tooltip">Instagram</span>
             </a>
           </li>
-          
         </ul>
       </div>
     </nav>

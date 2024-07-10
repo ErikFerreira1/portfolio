@@ -1,0 +1,99 @@
+.titleAbout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+
+  color: white;
+}
+
+.titleAbout > img {
+  width: 20vw;
+  height: 20vw;
+}
+.titleAbout > p {
+  background-color: rgba(0, 0, 0, 0.863);
+  text-align: justify;
+  font-size: 20px;
+  width: 60vw;
+}
+.tecnology {
+  
+  padding-top: 50px;
+  padding-left: 13vw;
+}
+.tecnology > h1 {
+  
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    to left,
+    #71717a 20%,
+    #b3b3b3 40%,
+    #f2f2f2 60%,
+    #71717a 80%
+  );
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 2s linear infinite;
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
+.skills {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.skills > svg {
+  padding-right: 20px;
+  width: 7vw;
+  height: 12vh;
+  color: #ffffff;
+  transition: color 0.5s;
+ 
+}
+
+.icon:hover {
+  color: inherit;
+}
+
+.html:hover {
+  color: #e34f26;
+}
+
+.css:hover {
+  color: #1572b6;
+}
+
+.js:hover {
+  color: #f7df1e;
+}
+
+.react:hover {
+  color: #61dafb;
+}
+
+.mongo:hover {
+  color: #47a248;
+}
+
+.node:hover {
+  color: #339933;
+}
+
+.python:hover {
+  color: #3776ab;
+}
