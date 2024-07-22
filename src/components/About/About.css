@@ -1,23 +1,45 @@
-.titleAbout {
+.about {
+  font-family: "Poppins", sans-serif;
+}
+
+.titleAboutMe {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 50vh;
+  color: white;
 
+  padding-top: 5vh;
+  
+}
+.titleAboutMe > h1 { 
+  font-weight: 300;
+}
+
+
+.titleAbout {
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
   color: white;
 }
 
 .titleAbout > img {
-  width: 20vw;
-  height: 20vw;
+  width: 15vw;
+  height: 15vw;
 }
 .titleAbout > p {
-  background-color: rgba(0, 0, 0, 0.863);
+ 
   text-align: justify;
   font-size: 20px;
-  width: 60vw;
+  width: 50vw;
+  line-height: 1.5;
+  padding-left: 10px;
 }
+
 .tecnology {
   
   padding-top: 50px;

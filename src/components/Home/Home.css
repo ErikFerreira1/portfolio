@@ -4,13 +4,12 @@
   }
 }
 
-
 .titleHome {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 40vh;
+  height: 90vh;
 
   text-transform: uppercase;
   color: white;
@@ -18,17 +17,17 @@
 .titleHome > h1 {
   width: 660px;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 35px;
   margin: 0px;
 }
 .titleHome > h2 {
-  font-weight: 500;
-  font-size: 50px;
+  font-weight: 400;
+  font-size: 60px;
   margin: 0px;
 }
 .titleHome > h3 {
   font-weight: 400;
-  font-size: 30px;
+  font-size: 35px;
   text-align: center;
 
   width: 34vw;
@@ -83,8 +82,8 @@ article {
   border-radius: 2px;
 
   --c: #a1a1a1;
-  --b: 1px; 
-  --g: 2px; 
+  --b: 1px;
+  --g: 2px;
 
   padding: calc(var(--g) + var(--b));
   --_g: #0000 25%, var(--c) 0;

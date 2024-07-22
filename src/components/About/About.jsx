@@ -12,9 +12,13 @@ import { SiMongodb } from "react-icons/si";
 
 const Sobre = () => {
   return (
-    <main>
+    <main className="about">
+      <div className="titleAboutMe">
+        <h1>Um pouco sobre mim</h1>
+      </div>
       <div className="titleAbout">
-        <img src={perfil} alt="perfil" />
+
+         <img src={perfil} alt="perfil" />
         <p>
           Olá! Meu nome é Erik Ferreira, sou do interior de Pernambuco. Desde
           criança, sempre tive um grande interesse por tecnologia. Foi em 2023

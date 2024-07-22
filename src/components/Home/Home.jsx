@@ -1,5 +1,4 @@
 import "./Home.css";
-import imgProject from "../../assets/Projeto.png"
 const Home = () => {
   return (
     <main>
@@ -8,12 +7,6 @@ const Home = () => {
         <h2>Me chamo, <strong>Erik Ferreira.</strong></h2>
         <h3> desenvolvedor <strong> front-end.</strong></h3>
       </div>
-      <article>
-        <div className="projectHome">
-          <h1>ÚLTIMO PROJETO</h1>
-          <a href="#"><img src={imgProject} alt="" /></a>
-        </div>
-      </article>
     </main>
   );
 };
