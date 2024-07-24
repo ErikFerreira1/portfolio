@@ -10,15 +10,12 @@
   color: white;
 
   padding-top: 5vh;
-  
 }
-.titleAboutMe > h1 { 
+.titleAboutMe > h1 {
   font-weight: 300;
 }
 
-
 .titleAbout {
-  
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -32,21 +29,41 @@
   height: 15vw;
 }
 .titleAbout > p {
- 
   text-align: justify;
   font-size: 20px;
   width: 50vw;
   line-height: 1.5;
   padding-left: 10px;
 }
-
-.tecnology {
-  
-  padding-top: 50px;
-  padding-left: 13vw;
+.personaSkills {
+  display: grid;
+  grid-template-columns: 700px 700px;
+  padding-top: 10vh;
+  place-content: center;
 }
+.softSkills {
+  display: flex;
+  flex-direction: column;
+}
+.softSkills > h1 {
+  text-align: center;
+}
+.softSkills > h2 {
+  margin: 0px;
+  padding: 10px 0px 10px 80px;
+
+  font-size: 22px;
+  color: white;
+}
+.softSkills > p {
+  margin: 0px;
+  font-size: 18px;
+  padding-left: 80px;
+  color: white;
+}
+.softSkills > h1,
 .tecnology > h1 {
-  
+  margin: 0px;
   font-size: 40px;
   font-weight: 400;
   text-transform: uppercase;
@@ -73,23 +90,39 @@
     }
   }
 }
+
+.tecnology {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.tecnology > h1 {
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: white;
+}
 .skills {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
-.skills > svg {
+.skills > svg{
+
+  padding-top: 30px;
   padding-right: 20px;
-  width: 7vw;
-  height: 12vh;
+  width: 70px;
+  height: 70px;
   color: #ffffff;
   transition: color 0.5s;
- 
 }
-
-.icon:hover {
-  color: inherit;
+.skillsLow > svg {
+  padding-top: 30px;
+  padding-right: 20px;
+  width: 70px;
+  height: 70px;
+  color: #ffffff;
+  transition: color 0.5s;
 }
 
 .html:hover {
@@ -97,7 +130,7 @@
 }
 
 .css:hover {
-  color: #1572b6;
+  color: #0095ff;
 }
 
 .js:hover {

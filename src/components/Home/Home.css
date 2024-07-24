@@ -15,7 +15,9 @@
   color: white;
 }
 .titleHome > h1 {
-  width: 660px;
+
+  text-align: start;
+  width: 790px;
   font-weight: 400;
   font-size: 35px;
   margin: 0px;
@@ -29,8 +31,6 @@
   font-weight: 400;
   font-size: 35px;
   text-align: center;
-
-  width: 34vw;
   margin: 0px;
 }
 .titleHome > h2 > strong,

@@ -1,4 +1,4 @@
-import image from "../../assets/background.jpg";
+
 import './Background.css';
 
 const Background = () => {
