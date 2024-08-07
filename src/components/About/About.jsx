@@ -14,10 +14,9 @@ const Sobre = () => {
   return (
     <main className="about">
       <div className="titleAboutMe">
-        <h1>Deixe-me apresentar</h1>
+        <img src={perfil} alt="perfil" />
       </div>
       <div className="titleAbout">
-        <img src={perfil} alt="perfil" />
         <p>
           Olá! Meu nome é Erik Ferreira, tenho 21 anos. Em 2023 tive meu
           primeiro contato com a programação, começando com o back-end em
@@ -29,13 +28,10 @@ const Sobre = () => {
       </div>
       <div className="personaSkills">
         <div className="softSkills">
-            <h1>habilidades interpessoais</h1>
-            <h2>Comunicação</h2>
-            <p>Sempre gostei de compartilhar ideias e aprender com os outros, o que me ajuda a trabalhar bem em equipe.</p>
-            <h2>Adaptabilidade</h2>
-            <p>Gosto de lidar com novas tecnologias e metodologias, sempre busco me atualizar e melhorar.</p>
-            <h2>Resolução de problemas</h2>
-            <p>Gosto de me sentir desafiado, pois isso me deixa mais empenhado em aprender e encontrar soluções eficazes.</p>
+          <h1>habilidades interpessoais</h1>
+          <h2>Comunicação</h2>
+          <h2>Adaptabilidade</h2>
+          <h2>Resolução de problemas</h2>
         </div>
         <div className="tecnology">
           <h1>tecnologias</h1>
