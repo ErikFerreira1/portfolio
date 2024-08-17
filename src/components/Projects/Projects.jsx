@@ -3,12 +3,14 @@ import { IoLogoJavascript } from "react-icons/io";
 import { FaHtml5, FaCss3Alt, FaNodeJs } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { BiLogoGithub } from "react-icons/bi";
+import { MdKeyboardArrowRight } from "react-icons/md";
 import projeto from "../../assets/Projeto.png";
 
 import "./Projects.css";
 const Carrossel = ({ technologies }) => {
   return (
     <div
+      className="marquee"
       style={{
         width: "100%",
         display: "flex",
@@ -21,7 +23,8 @@ const Carrossel = ({ technologies }) => {
           pauseOnHover={true}
           autoFill={true}
           gradient={true}
-          gradientColor={[24, 24, 27]}
+          gradientColor="rgba(0, 0, 0, 1)"
+          speed={40}
           style={{ width: "100%", fontSize: "24px" }}
         >
           {technologies.map((item, i) => (
@@ -42,7 +45,7 @@ const Project = () => {
     <IoLogoJavascript />,
     <FaNodeJs />,
     <SiMongodb />,
-  ]; // Exemplo de tecnologias
+  ];
 
   return (
     <main className="project">
@@ -72,15 +75,15 @@ const Project = () => {
               </div>
               <div className="buttons">
                 <a href="#">
-                  <button>
+                  <button className="arrow" >
                     {" "}
-                    <BiLogoGithub className="github" /> Detalhes
+                    <MdKeyboardArrowRight  /> DETALHES
                   </button>
                 </a>
                 <a href="#">
                   <button>
                     <BiLogoGithub className="github" />
-                    GitHub
+                    GITHUB
                   </button>
                 </a>
               </div>
