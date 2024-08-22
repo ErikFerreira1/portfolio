@@ -1,0 +1,27 @@
+.movflx {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 200px;
+    padding: 11rem 11rem 0rem 15rem;
+
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+.back > a {
+    text-decoration: none;
+    color: white;
+    background-color: tomato;
+  
+}

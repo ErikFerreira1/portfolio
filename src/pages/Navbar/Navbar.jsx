@@ -40,12 +40,6 @@ const Navbar = () => {
               <span className="tooltip">Projetos</span>
             </Link>
           </li>
-          <li>
-            <Link to="/publications">
-              <BiBookAlt />
-              <span className="tooltip">Publicações</span>
-            </Link>
-          </li>
         </ul>
       </div>
       <div className="social">

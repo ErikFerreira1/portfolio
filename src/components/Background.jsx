@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './Background.css';
+
 
 const Background = () => {
   const canvasRef = useRef(null);
@@ -63,7 +63,7 @@ const Background = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="background-canvas" />;
+  return <canvas ref={canvasRef} className="background-canvas" style={  { position: "fixed", top: 0, left: 0, zIndex: -1, backgroundColor: "rgb(0, 0, 0)" }} />;
 };
 
 export default Background;

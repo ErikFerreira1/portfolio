@@ -4,6 +4,7 @@ import { FaHtml5, FaCss3Alt, FaNodeJs } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { BiLogoGithub } from "react-icons/bi";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { Link } from "react-router-dom";
 import projeto from "../../assets/Projeto.png";
 
 import "./Projects.css";
@@ -74,18 +75,21 @@ const Project = () => {
                 <Carrossel technologies={technologies} />
               </div>
               <div className="buttons">
-                <a href="#">
-                  <button className="arrow" >
+                <Link to="/Projects/Movflx">
+                  <button className="arrow">
                     {" "}
-                    <MdKeyboardArrowRight  /> DETALHES
+                    <MdKeyboardArrowRight /> DETALHES
                   </button>
-                </a>
-                <a href="#">
-                  <button>
-                    <BiLogoGithub className="github" />
-                    GITHUB
-                  </button>
-                </a>
+                </Link>
+
+             
+                  <a href="https://github.com/ErikFerreira1/Movflx" target="_blank">
+                    <button className="github">
+                      <BiLogoGithub />
+                      GITHUB
+                    </button>
+                  </a>
+               
               </div>
             </div>
           </li>

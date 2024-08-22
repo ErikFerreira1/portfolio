@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar.jsx";
-import Background from "./components/Background/Background";
-import Home from "./components/Home/Home.jsx";
-import About from "./components/About/About.jsx";
+import Navbar from "./pages/Navbar/Navbar.jsx";
+import Background from "./components/Background.jsx";
+import Home from "./pages/Home/Home.jsx";
+import About from "./pages/About/About.jsx";
 import "./App.css";
-import Projects from "./components/Projects/Projects.jsx";
+import Projects from "./pages/Projects/Projects.jsx";
+import Movflx from "./pages/Projects/movflx/Movflx.jsx";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Projects" element= {<Projects />} />
+          <Route path="/Projects/Movflx" element= {<Movflx />} />
         </Routes>
       </Router>
     </>
