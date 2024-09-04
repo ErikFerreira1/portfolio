@@ -75,7 +75,7 @@ const Project = () => {
                 <Carrossel technologies={technologies} />
               </div>
               <div className="buttons">
-                <Link to="/Projects/Movflx">
+                <Link to="https://erikferreira1.github.io/Movflx/Front-end/index.html" target="_blank">
                   <button className="arrow">
                     {" "}
                     <MdKeyboardArrowRight /> DETALHES
