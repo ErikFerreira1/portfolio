@@ -12,8 +12,9 @@ li {
   height: 20vh;
 }
 .titleProject > h1 {
+  
   font-size: 50px;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
   color: white;
 }

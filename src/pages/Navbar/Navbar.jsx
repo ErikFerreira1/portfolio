@@ -46,7 +46,7 @@ const Navbar = () => {
         <ul className="navLinksSocial">
           <li>
             <a
-              href="https://www.github.com"
+              href="https://github.com/ErikFerreira1"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -56,7 +56,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/erik-ferreira-b2287a285/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -66,7 +66,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/erikferreiira/"
               target="_blank"
               rel="noopener noreferrer"
             >

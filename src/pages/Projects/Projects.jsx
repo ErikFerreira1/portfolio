@@ -63,14 +63,8 @@ const Project = () => {
               <div className="title">
                 <h1>Movflx</h1>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                  corporis similique voluptates optio officia odio
-                  necessitatibus, dolor praesentium magnam atque nisi, eaque
-                  natus sed alias nobis, est cupiditate sequi eius? Lorem ipsum
-                  dolor sit amet consectetur adipisicing elit. Sit aspernatur
-                  blanditiis porro dolore ad laboriosam, id ex fugit sapiente.
-                  Esse porro blanditiis totam? Magni libero expedita esse,
-                  laboriosam quidem odio?
+                Movflx é um site de filmes desenvolvido utilizando a API do TheMovieDB, oferecendo uma experiência completa para os amantes de cinema. Entre suas principais funcionalidades estão a exibição dos filmes mais buscados e bem avaliados do momento, pesquisa detalhada de títulos e informações completas, incluindo sinopse, pôster, nota, duração, ano de lançamento e a opção de favoritar filmes. O site também conta com um sistema de busca por gêneros e sistema de login e cadastro com autenticação JWT.
+
                 </p>
                 <Carrossel technologies={technologies} />
               </div>
@@ -78,7 +72,7 @@ const Project = () => {
                 <Link to="https://erikferreira1.github.io/Movflx/Front-end/index.html" target="_blank">
                   <button className="arrow">
                     {" "}
-                    <MdKeyboardArrowRight /> DETALHES
+                    <MdKeyboardArrowRight /> ACESSE
                   </button>
                 </Link>
 
