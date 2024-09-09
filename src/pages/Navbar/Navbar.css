@@ -11,12 +11,13 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  border-right: 1px solid rgba(83, 83, 83, 0.486);
+  border-right: 1px solid rgba(48, 48, 48, 0.486);
 }
 
 .navLogo > img {
-  width: 60px;
-  height: 60px;
+  width: 52px;
+  height: 55px;
+  padding: 10px;
 }
 
 ul {
