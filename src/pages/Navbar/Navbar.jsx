@@ -11,14 +11,14 @@ import {
 import {
   MdWorkOutline,
 } from "react-icons/md";
-import logo from "../../assets/perfil.png";
+
 import "./Navbar.css";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navLogo">
-        <img src={logo} alt="Logo" />
+        <img src="#" alt="Logo" />
       </div>
       <div>
         <ul className="navLinks">
