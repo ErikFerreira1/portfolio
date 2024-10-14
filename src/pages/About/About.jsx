@@ -1,5 +1,5 @@
 import "./About.css";
-
+import  perfil  from "../../assets/perfil.png";
 import { IoLogoJavascript } from "react-icons/io";
 import {
   FaHtml5,
@@ -14,7 +14,7 @@ const Sobre = () => {
   return (
     <main className="about">
       <div className="titleAboutMe">
-        <img src="" alt="perfil" />
+        <img src={perfil} alt="perfil" />
       </div>
       <div className="titleAbout">
         <p>
@@ -28,7 +28,7 @@ const Sobre = () => {
       </div>
       <div className="personaSkills">
         <div className="softSkills">
-          <h1>habilidades interpessoais</h1>
+          <h1>SOFT SKILLS</h1>
           <h2>Comunicação</h2>
           <h2>Adaptabilidade</h2>
           <h2>Resolução de problemas</h2>

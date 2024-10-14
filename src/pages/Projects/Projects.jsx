@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaHtml5, FaCss3Alt, FaNodeJs } from "react-icons/fa";
@@ -5,9 +6,10 @@ import { SiMongodb } from "react-icons/si";
 import { BiLogoGithub } from "react-icons/bi";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
-import projeto from "../../assets/Projeto.png";
-
+import projeto from "../../assets/Projeto.png"; 
+import projetoMobile from "../../assets/ProjetoMobile.png"; 
 import "./Projects.css";
+
 const Carrossel = ({ technologies }) => {
   return (
     <div
@@ -19,19 +21,17 @@ const Carrossel = ({ technologies }) => {
         marginTop: "16px",
       }}
     >
-      <ul style={{ display: "flex", maxWidth: "500px", textAlign: "center" }}>
+      <ul>
         <Marquee
           pauseOnHover={true}
           autoFill={true}
           gradient={true}
           gradientColor="rgba(0, 0, 0, 1)"
           speed={40}
-          style={{ width: "100%", fontSize: "24px" }}
+          style={{ width: "100%", fontSize: "25px" }}
         >
           {technologies.map((item, i) => (
-            <li key={i} style={{ margin: "0 8px" }}>
-              {item}
-            </li>
+            <li key={i}>{item}</li>
           ))}
         </Marquee>
       </ul>
@@ -40,6 +40,22 @@ const Carrossel = ({ technologies }) => {
 };
 
 const Project = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  
+  
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    
+    
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const technologies = [
     <FaHtml5 />,
     <FaCss3Alt />,
@@ -57,33 +73,45 @@ const Project = () => {
         <ul>
           <li>
             <div className="imgProject">
-              <img src={projeto} alt="projeto" />
+              <img
+                src={isMobile ? projetoMobile : projeto} 
+                alt="projeto"
+              />
             </div>
             <div className="infoProject">
               <div className="title">
                 <h1>Movflx</h1>
                 <p>
-                Movflx é um site de filmes desenvolvido utilizando a API do TheMovieDB, oferecendo uma experiência completa para os amantes de cinema. Entre suas principais funcionalidades estão a exibição dos filmes mais buscados e bem avaliados do momento, pesquisa detalhada de títulos e informações completas, incluindo sinopse, pôster, nota, duração, ano de lançamento e a opção de favoritar filmes. O site também conta com um sistema de busca por gêneros e sistema de login e cadastro com autenticação JWT.
-
+                  Movflx é um site de filmes desenvolvido utilizando a API do
+                  TheMovieDB, oferecendo uma experiência completa para os
+                  amantes de cinema. Entre suas principais funcionalidades estão
+                  a exibição dos filmes mais buscados e bem avaliados do
+                  momento, pesquisa detalhada de títulos e informações
+                  completas, incluindo sinopse, pôster, nota, duração, ano de
+                  lançamento e a opção de favoritar filmes. O site também conta
+                  com um sistema de busca por gêneros e sistema de login e
+                  cadastro com autenticação JWT.
                 </p>
                 <Carrossel technologies={technologies} />
               </div>
               <div className="buttons">
-                <Link to="https://erikferreira1.github.io/Movflx/Front-end/index.html" target="_blank">
+                <Link
+                  to="https://erikferreira1.github.io/Movflx/Front-end/index.html"
+                  target="_blank"
+                >
                   <button className="arrow">
-                    {" "}
                     <MdKeyboardArrowRight /> ACESSE
                   </button>
                 </Link>
-
-             
-                  <a href="https://github.com/ErikFerreira1/Movflx" target="_blank">
-                    <button className="github">
-                      <BiLogoGithub />
-                      GITHUB
-                    </button>
-                  </a>
-               
+                <a
+                  href="https://github.com/ErikFerreira1/Movflx"
+                  target="_blank"
+                >
+                  <button className="github">
+                    <BiLogoGithub />
+                    GITHUB
+                  </button>
+                </a>
               </div>
             </div>
           </li>

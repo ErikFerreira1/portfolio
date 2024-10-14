@@ -1,9 +1,12 @@
 .project {
   font-family: "Poppins", sans-serif;
+  padding-left: 70px;
 }
 li {
   display: grid;
   grid-template-columns: 0.5fr 0.5fr;
+  
+ 
 }
 .titleProject {
   display: flex;
@@ -26,22 +29,11 @@ li {
 }
 
 .Project > ul > li > div > img {
-  width: 1000px;
-  height: 500px;
+  width: 900px;
 }
-.Project > ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-.imgProject {
-  display: grid;
-}
-
 .infoProject {
   display: flex;
+  
   flex-direction: column;
   align-items: center;
   color: white;
@@ -58,7 +50,11 @@ li {
 .title > p {
   text-align: justify;
 }
-
+.marquee > ul {
+  display: flex;
+  text-align: center;
+  max-width: 500px;
+}
 .rfm-marquee-container {
   overflow-x: hidden;
   display: flex;
@@ -70,6 +66,9 @@ li {
 .rfm-child svg {
   width: 40px;
   height: 40px;
+}
+.rfm-child > li {
+  margin: 0px 10px;
 }
 .buttons {
   display: flex;
@@ -119,4 +118,68 @@ li {
     transition: 0.3s;
     transform: scale(1.13);
   }
+}
+@media screen and (max-width: 1600px) {
+  .Project > ul > li > div > img {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 1480px) {
+   li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    width: auto;
+   }
+   .rfm-child > li {
+    margin: 0px 15px;
+  }
+   .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+ 
+   
+   }
+}
+
+@media screen and (max-width: 768px) {
+  .Project > ul > li > div > img {
+    width:250px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title > p {
+    width: 100%;
+  }
+  .marquee > ul{
+    max-width: 350px;
+  }
+  .infoProject {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 440px) {
+  .marquee > ul{
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 387px) {
+  .buttons > a > button {
+    width: 250px;
+  }
+  .title > p {
+    width: 80%;
+  }
+  .marquee > ul{
+    max-width: 250px;
+  }
+  
 }

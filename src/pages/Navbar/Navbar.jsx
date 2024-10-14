@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import  perfil  from "../../assets/perfil.png";
 import {
   BiBookAlt,
   BiHomeAlt,
@@ -18,7 +19,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navLogo">
-        <img src="#" alt="Logo" />
+        <img src={perfil} alt="Logo" />
       </div>
       <div>
         <ul className="navLinks">

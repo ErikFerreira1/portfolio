@@ -9,13 +9,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 90vh;
-
+  height: 80vh;
+  padding-left: 70px;
   text-transform: uppercase;
   color: white;
 }
 .titleHome > h1 {
-
   text-align: start;
   width: 790px;
   font-weight: 400;
@@ -101,4 +100,37 @@ article {
 .projectHome > a > img:hover {
   --_i: 100%;
   transition: 0.3s, background-size 0.3s 0.3s;
+}
+@media screen and (max-width: 900px) {
+  .titleHome > h1 {
+    font-size: 25px;
+    width: 660px;
+  }
+  .titleHome > h2 {
+    font-size: 50px;
+  }
+  .titleHome > h3 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .titleHome > h1 {
+    font-size: 20px;
+    width: 530px;
+  }
+  .titleHome > h2 {
+    font-size: 40px;
+  }
+  .titleHome > h3 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 601px) {
+.titleHome {
+  flex-wrap: wrap;
+}
+.titleHome > h1, .titleHome > h2, .titleHome > h3 {
+  width: 300px;
+}
+
 }
