@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navLogo">
-        <img src={perfil} alt="Logo" />
+        <img src="#" alt="Logo" />
       </div>
       <div>
         <ul className="navLinks">

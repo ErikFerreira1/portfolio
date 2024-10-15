@@ -14,7 +14,7 @@ const Sobre = () => {
   return (
     <main className="about">
       <div className="titleAboutMe">
-        <img src={perfil} alt="perfil" />
+        <img src="#" alt="perfil" />
       </div>
       <div className="titleAbout">
         <p>
