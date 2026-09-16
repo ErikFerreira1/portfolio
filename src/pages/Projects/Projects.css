@@ -1,185 +1,220 @@
-.project {
+.projectsPage {
+  width: min(1440px, calc(100% - 140px));
+  margin: 0 auto 0 70px;
+  padding: 80px 35px 100px;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  padding-left: 70px;
-}
-li {
-  display: grid;
-  grid-template-columns: 0.5fr 0.5fr;
-  
- 
-}
-.titleProject {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 20vh;
-}
-.titleProject > h1 {
-  
-  font-size: 50px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: white;
-}
-.Project {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  color: #fff;
 }
 
-.Project > ul > li > div > img {
-  width: 900px;
-}
-.infoProject {
-  display: flex;
-  
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  width: 500px;
-}
-
-.title > h1 {
-  margin: 0px;
-  font-size: 40px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.title > p {
-  text-align: justify;
-}
-.marquee > ul {
-  display: flex;
+.projectsHeader {
+  max-width: 760px;
+  margin: 0 auto 70px;
   text-align: center;
-  max-width: 500px;
-}
-.rfm-marquee-container {
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  transform: none;
 }
 
-.rfm-child svg {
-  width: 40px;
-  height: 40px;
+.projectsHeader > span,
+.projectNumber {
+  color: #72d99f;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
 }
-.rfm-child > li {
-  margin: 0px 10px;
+
+.projectsHeader h1 {
+  margin: 6px 0 8px;
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
 }
-.buttons {
+
+.projectsHeader p {
+  margin: 0;
+  color: #a8a8ad;
+  font-size: 16px;
+}
+
+.projectsList {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 200px;
-  padding-top: 50px;
-}
-.buttons > a {
-  text-decoration: none;
+  gap: 100px;
 }
 
-.buttons > a > button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.projectCard {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(360px, 0.85fr);
+  gap: clamp(36px, 5vw, 80px);
   align-items: center;
-  width: 300px;
-  height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.315);
-  background-color: rgba(0, 0, 0, 0.664);
-  color: white;
-  border-radius: 10px;
-  font-size: 17px;
+}
+
+.projectCard:nth-child(even) .projectImage {
+  order: 2;
+}
+
+.projectImage {
+  position: relative;
+}
+
+.projectImage::before {
+  content: "";
+  position: absolute;
+  inset: 8% 10%;
+  z-index: -1;
+  background: rgba(80, 221, 139, 0.2);
+  filter: blur(60px);
+}
+
+.projectImage img {
+  display: block;
+  width: 100%;
+  max-height: 620px;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 50px rgba(0, 0, 0, 0.45));
+}
+
+.projectInfo {
+  min-width: 0;
+}
+
+.projectInfo h2 {
+  margin: 5px 0 18px;
+  font-size: clamp(36px, 4vw, 52px);
   font-weight: 600;
-  cursor: pointer;
+  line-height: 1.05;
+  text-transform: uppercase;
 }
 
-.arrow > svg,
-.github > svg {
-  height: 20px;
-  width: 20px;
-  padding-bottom: 2px;
-  padding-right: 5px;
-  transition: 0.3s;
+.projectInfo > p {
+  margin: 0;
+  color: #c0c0c5;
+  font-size: 15px;
+  line-height: 1.8;
 }
-.arrow:hover {
-  svg {
-    transition: 0.3s;
-    transform: scale(1.35);
+
+.projectHighlight {
+  color: #72d99f;
+  font-weight: 600;
+}
+
+.technologyCarousel {
+  width: 100%;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.technologyItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-right: 28px;
+  color: #d7d7da;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.technologyItem svg {
+  width: 27px;
+  height: 27px;
+  color: #72d99f;
+}
+
+.projectButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.projectButtons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-width: 155px;
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1px solid #72d99f;
+  border-radius: 8px;
+  background: #72d99f;
+  color: #07110b;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.projectButtons a:hover {
+  transform: translateY(-2px);
+  background: #8cebb4;
+}
+
+.projectButtons a.repositoryButton {
+  border-color: #3e3e43;
+  background: rgba(12, 12, 14, 0.8);
+  color: #fff;
+}
+
+.projectButtons a.repositoryButton:hover {
+  border-color: #72d99f;
+  color: #72d99f;
+}
+
+.projectButtons svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (max-width: 1050px) {
+  .projectsPage {
+    width: calc(100% - 70px);
+    padding-inline: 28px;
   }
-}
-.github:hover {
-  svg {
-    transition: 0.3s;
-    transform: scale(1.13);
+
+  .projectCard {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
-}
-@media screen and (max-width: 1600px) {
-  .Project > ul > li > div > img {
-    width: 600px;
+
+  .projectCard:nth-child(even) .projectImage {
+    order: initial;
   }
-}
 
-@media screen and (max-width: 1480px) {
-   li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-
-    width: auto;
-   }
-   .rfm-child > li {
-    margin: 0px 15px;
+  .projectImage {
+    width: min(100%, 760px);
+    margin: 0 auto;
   }
-   .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
- 
-   
-   }
-}
 
-@media screen and (max-width: 768px) {
-  .Project > ul > li > div > img {
-    width:250px;
+  .projectInfo {
+    width: min(100%, 720px);
+    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .title > p {
+  .projectsPage {
+    padding: 55px 20px 75px;
+  }
+
+  .projectsHeader {
+    margin-bottom: 48px;
+  }
+
+  .projectsList {
+    gap: 75px;
+  }
+
+  .projectInfo > p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .projectButtons {
+    flex-direction: column;
+  }
+
+  .projectButtons a {
     width: 100%;
+    box-sizing: border-box;
   }
-  .marquee > ul{
-    max-width: 350px;
-  }
-  .infoProject {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 440px) {
-  .marquee > ul{
-    max-width: 300px;
-  }
-}
-@media screen and (max-width: 387px) {
-  .buttons > a > button {
-    width: 250px;
-  }
-  .title > p {
-    width: 80%;
-  }
-  .marquee > ul{
-    max-width: 250px;
-  }
-  
 }

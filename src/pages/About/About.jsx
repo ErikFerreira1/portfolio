@@ -1,55 +1,121 @@
 import "./About.css";
-import  perfil  from "../../assets/perfil.png";
-import { IoLogoJavascript } from "react-icons/io";
+import profilePhoto from "../../assets/profile-photo.png";
+import { FaCubes, FaJava, FaReact } from "react-icons/fa";
+import PropTypes from "prop-types";
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaReact,
-  FaPython,
-  FaNodeJs,
-} from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
+  SiApachemaven,
+  SiDocker,
+  SiFlyway,
+  SiGithubactions,
+  SiHibernate,
+  SiJunit5,
+  SiMongodb,
+  SiPostgresql,
+  SiSpringboot,
+  SiSpringsecurity,
+  SiSwagger,
+} from "react-icons/si";
 
-const Sobre = () => {
+const Skill = ({ icon, name, className }) => (
+  <div className={`skill ${className}`} title={name}>
+    {icon}
+    <span>{name}</span>
+  </div>
+);
+
+Skill.propTypes = {
+  icon: PropTypes.node.isRequired,
+  name: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+};
+
+const About = () => {
   return (
     <main className="about">
-      <div className="titleAboutMe">
-        <img src="#" alt="perfil" />
+      <div className="profileFrame">
+        <img src={profilePhoto} alt="Erik Ferreira" />
       </div>
+
       <div className="titleAbout">
         <p>
-          Olá! Meu nome é Erik Ferreira, tenho 21 anos. Em 2023 tive meu
-          primeiro contato com a programação, começando com o back-end em
-          Python. No entanto, ao descobrir as diversas áreas da programação,
-          surgiu a dúvida sobre qual caminho seguir. Quando conheci o front-end,
-          fiquei muito mais interessado na parte web. Desde então, tenho me
-          dedicado a me especializar na área.
+          Desenvolvedor backend com foco em Java e Spring Boot, especializado em
+          construir APIs REST robustas com arquitetura hexagonal, regras de
+          negócio bem definidas e testes automatizados. Meu projeto de
+          referência, o StockSync, sincroniza estoque e pedidos entre
+          marketplaces com autenticação segura e integração via OAuth2. Vim do
+          front-end e migrei pro back-end por identificação com a área — hoje é
+          onde busco construir soluções organizadas, confiáveis e prontas pra
+          escalar.
         </p>
       </div>
-      <div className="personaSkills">
-        <div className="softSkills">
-          <h1>SOFT SKILLS</h1>
-          <h2>Comunicação</h2>
-          <h2>Adaptabilidade</h2>
-          <h2>Resolução de problemas</h2>
+
+      <section className="technologySection" aria-labelledby="technology-title">
+        <div className="technologyHeading">
+          <span>STACK</span>
+          <h1 id="technology-title">Tecnologias</h1>
         </div>
-        <div className="tecnology">
-          <h1>tecnologias</h1>
-          <div className="skills">
-            <FaHtml5 className="html" title="HTML" />
-            <FaCss3Alt className="css" title="CSS" />
-            <IoLogoJavascript className="js" title="JavaScript" />
-            <FaReact className="react" title="React" />
-          </div>
-          <div className="skillsLow">
-            <SiMongodb className="mongo" title="MongoDB" />
-            <FaNodeJs className="node" title="Node.js" />
-            <FaPython className="python" title="Python" />
-          </div>
+
+        <div className="technologyGrid">
+          <article className="technologyCard">
+            <span className="cardNumber">01</span>
+            <h2>Desenvolvimento</h2>
+
+            <h3>Back-end</h3>
+            <div className="skillList">
+              <Skill icon={<FaJava />} name="Java" className="java" />
+              <Skill icon={<SiSpringboot />} name="Spring Boot" className="spring" />
+              <Skill
+                icon={<SiSpringsecurity />}
+                name="Spring Security"
+                className="springSecurity"
+              />
+              <Skill
+                icon={<SiHibernate />}
+                name="Hibernate / JPA"
+                className="hibernate"
+              />
+              <Skill icon={<SiApachemaven />} name="Maven" className="maven" />
+            </div>
+
+            <h3>Front-end</h3>
+            <div className="skillList">
+              <Skill icon={<FaReact />} name="React" className="react" />
+            </div>
+          </article>
+
+          <article className="technologyCard">
+            <span className="cardNumber">02</span>
+            <h2>Dados</h2>
+            <p className="cardDescription">Persistência relacional e NoSQL.</p>
+            <div className="skillList">
+              <Skill icon={<SiPostgresql />} name="PostgreSQL" className="postgresql" />
+              <Skill icon={<SiMongodb />} name="MongoDB" className="mongodb" />
+            </div>
+          </article>
+
+          <article className="technologyCard">
+            <span className="cardNumber">03</span>
+            <h2>Infraestrutura &amp; Qualidade</h2>
+            <p className="cardDescription">
+              Documentação, automação, containers e testes.
+            </p>
+            <div className="skillList">
+              <Skill icon={<SiDocker />} name="Docker" className="docker" />
+              <Skill icon={<SiGithubactions />} name="GitHub Actions" className="githubActions" />
+              <Skill icon={<SiSwagger />} name="Swagger / OpenAPI" className="swagger" />
+              <Skill icon={<SiJunit5 />} name="JUnit 5" className="junit" />
+              <Skill icon={<SiFlyway />} name="Flyway" className="flyway" />
+              <Skill
+                icon={<FaCubes />}
+                name="Testcontainers"
+                className="testcontainers"
+              />
+            </div>
+          </article>
         </div>
-      </div>
+      </section>
     </main>
   );
 };
 
-export default Sobre;
+export default About;

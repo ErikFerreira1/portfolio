@@ -1,36 +1,31 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import  perfil  from "../../assets/perfil.png";
 import {
-  BiBookAlt,
   BiHomeAlt,
+  BiEnvelope,
   BiLogoGithub,
-  BiLogoInstagramAlt,
   BiLogoLinkedin,
   BiUserCircle,
 } from "react-icons/bi";
-import {
-  MdWorkOutline,
-} from "react-icons/md";
-
+import { MdWorkOutline } from "react-icons/md";
 import "./Navbar.css";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="navLogo">
-        <img src="#" alt="Logo" />
-      </div>
+      <Link className="navLogo" to="/" aria-label="Ir para o início">
+        EF
+      </Link>
+
       <div>
         <ul className="navLinks">
           <li>
             <Link to="/">
               <BiHomeAlt />
-              <span className="tooltip">Home</span>
+              <span className="tooltip">Início</span>
             </Link>
           </li>
           <li>
-            <Link to="../About">
+            <Link to="/About">
               <BiUserCircle />
               <span className="tooltip">Sobre mim</span>
             </Link>
@@ -43,6 +38,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+
       <div className="social">
         <ul className="navLinksSocial">
           <li>
@@ -67,12 +63,11 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="https://www.instagram.com/erikferreiira/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:erikferreira03@outlook.com"
+              aria-label="Enviar e-mail para Erik Ferreira"
             >
-              <BiLogoInstagramAlt />
-              <span className="tooltip">Instagram</span>
+              <BiEnvelope />
+              <span className="tooltip">erikferreira03@outlook.com</span>
             </a>
           </li>
         </ul>

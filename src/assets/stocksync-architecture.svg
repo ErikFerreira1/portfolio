@@ -1,0 +1,80 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="panel" x1="100" y1="40" x2="1080" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#161B19"/>
+      <stop offset="1" stop-color="#080B0A"/>
+    </linearGradient>
+    <linearGradient id="green" x1="360" y1="170" x2="840" y2="565" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9AF4BE"/>
+      <stop offset="1" stop-color="#45B97A"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" stroke="#80E4AA" stroke-opacity="0.055"/>
+    </pattern>
+  </defs>
+
+  <rect x="30" y="30" width="1140" height="660" rx="36" fill="url(#panel)" stroke="#38413D"/>
+  <rect x="30" y="30" width="1140" height="660" rx="36" fill="url(#grid)"/>
+  <circle cx="605" cy="352" r="185" fill="#53CD87" fill-opacity="0.12" filter="url(#glow)"/>
+
+  <g opacity="0.8">
+    <circle cx="82" cy="79" r="7" fill="#FF6B6B"/>
+    <circle cx="108" cy="79" r="7" fill="#FFD166"/>
+    <circle cx="134" cy="79" r="7" fill="#72D99F"/>
+  </g>
+  <text x="600" y="94" fill="#8E9893" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" letter-spacing="5">INVENTORY SYNCHRONIZATION</text>
+
+  <g filter="url(#shadow)">
+    <rect x="96" y="231" width="260" height="258" rx="24" fill="#101513" stroke="#36423D"/>
+    <rect x="122" y="258" width="208" height="56" rx="12" fill="#18201D"/>
+    <rect x="122" y="329" width="208" height="56" rx="12" fill="#18201D"/>
+    <rect x="122" y="400" width="208" height="56" rx="12" fill="#18201D"/>
+    <rect x="143" y="273" width="39" height="26" rx="5" fill="#72D99F" fill-opacity="0.9"/>
+    <rect x="143" y="344" width="39" height="26" rx="5" fill="#72D99F" fill-opacity="0.62"/>
+    <rect x="143" y="415" width="39" height="26" rx="5" fill="#72D99F" fill-opacity="0.36"/>
+    <path d="M203 281H294M203 293H265M203 352H294M203 364H247M203 423H294M203 435H274" stroke="#829089" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="437" y="177" width="326" height="366" rx="30" fill="#111714" stroke="#72D99F" stroke-opacity="0.72" stroke-width="2"/>
+    <circle cx="600" cy="294" r="68" fill="url(#green)"/>
+    <path d="M565 284L600 263L635 284V326L600 347L565 326V284Z" stroke="#08120C" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M566 285L600 306M634 285L600 306M600 306V347" stroke="#08120C" stroke-width="8" stroke-linecap="round"/>
+    <text x="600" y="410" fill="white" font-family="Arial, sans-serif" font-size="38" font-weight="700" text-anchor="middle">StockSync</text>
+    <text x="600" y="448" fill="#72D99F" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="3">JAVA • SPRING BOOT</text>
+    <rect x="512" y="476" width="176" height="36" rx="18" fill="#72D99F" fill-opacity="0.1" stroke="#72D99F" stroke-opacity="0.45"/>
+    <circle cx="544" cy="494" r="6" fill="#72D99F"/>
+    <text x="610" y="500" fill="#CDE6D7" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">API ONLINE</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="844" y="231" width="260" height="258" rx="24" fill="#101513" stroke="#36423D"/>
+    <circle cx="974" cy="333" r="64" fill="#FFE600"/>
+    <path d="M924 326C941 310 949 313 962 324L974 335L986 324C999 313 1007 310 1024 326" stroke="#2B2B2B" stroke-width="13" stroke-linecap="round"/>
+    <path d="M942 350C958 364 990 364 1006 350" stroke="#2B2B2B" stroke-width="8" stroke-linecap="round"/>
+    <text x="974" y="430" fill="white" font-family="Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle">MARKETPLACE</text>
+    <text x="974" y="458" fill="#8E9893" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" letter-spacing="2">ANÚNCIOS</text>
+  </g>
+
+  <g stroke="url(#green)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M373 330H411L421 320"/>
+    <path d="M421 320L411 310"/>
+    <path d="M827 330H789L779 320"/>
+    <path d="M779 320L789 310"/>
+    <path d="M421 400H383L373 390" opacity="0.48"/>
+    <path d="M373 390L383 380" opacity="0.48"/>
+    <path d="M779 400H817L827 390" opacity="0.48"/>
+    <path d="M827 390L817 380" opacity="0.48"/>
+  </g>
+
+  <g fill="#72D99F" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2">
+    <text x="226" y="535" text-anchor="middle">ESTOQUE</text>
+    <text x="974" y="535" text-anchor="middle">SINCRONIZAÇÃO</text>
+  </g>
+</svg>

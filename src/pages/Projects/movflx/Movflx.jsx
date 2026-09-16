@@ -1,4 +1,3 @@
-import React from "react";
 import "./Movflx.css";
 
 const Movflx = () => {

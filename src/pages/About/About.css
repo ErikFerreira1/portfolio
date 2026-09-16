@@ -1,247 +1,276 @@
 .about {
+  width: calc(100% - 70px);
+  min-height: 100vh;
+  margin-left: 70px;
+  padding: 70px clamp(24px, 5vw, 80px) 90px;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-left: 70px;
-  height: auto; 
-  padding-bottom: 20px; 
+  color: #fff;
 }
 
-.titleAboutMe {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  margin-bottom: 20px; 
+.profileFrame {
+  width: 156px;
+  height: 156px;
+  margin: 0 auto 30px;
+  overflow: hidden;
+  border: 1px solid rgba(114, 217, 159, 0.65);
+  border-radius: 50%;
+  background: #111512;
+  box-shadow: 0 0 50px rgba(114, 217, 159, 0.16);
 }
 
-.titleAboutMe > h1 {
-  font-weight: 300;
-}
-
-.titleAboutMe > img {
-  width: 12vw;
-  height: 12vw;
+.profileFrame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
 }
 
 .titleAbout {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: auto; 
-  width: 50.52vw;
-  color: white;
-  margin-bottom: 20px; 
+  max-width: 790px;
+  margin: 0 auto 70px;
 }
 
-.titleAbout > p {
+.titleAbout p {
+  margin: 0;
+  color: #c7c7cb;
+  font-size: 17px;
+  line-height: 1.75;
   text-align: center;
-  font-size: 20px;
-  width: 50vw;
-  line-height: 1.5;
-  padding-left: 10px;
 }
 
-.personaSkills {
+.technologySection {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.technologyHeading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.technologyHeading > span {
+  color: #72d99f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.technologyHeading h1 {
+  margin: 5px 0 0;
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.technologyGrid {
   display: grid;
-  grid-template-columns: 400px 400px;
-  gap: 11vw;
-  place-content: center;
-  width: 100%; 
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
-.softSkills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.softSkills > h2 {
-  font-size: 22px;
-  color: white;
-  margin-bottom: 10px; 
-}
-
-.softSkills > p {
-  margin: 0px;
-  font-size: 18px;
-  padding-left: 80px;
-  color: white;
-}
-
-.softSkills > h1,
-.tecnology > h1 {
-  margin: 0px;
-  font-size: 40px;
-  font-weight: 400;
-  text-transform: uppercase;
+.technologyCard {
+  display: block;
+  position: relative;
+  min-height: 350px;
+  padding: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
   background: linear-gradient(
-    to left,
-    #71717a 20%,
-    #b3b3b3 40%,
-    #f2f2f2 60%,
-    #71717a 80%
+    145deg,
+    rgba(20, 25, 23, 0.92),
+    rgba(7, 9, 8, 0.92)
   );
-  background-size: 200% auto;
-  color: #000;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 2s linear infinite;
 }
 
-@keyframes shine {
-  to {
-    background-position: 200% center;
-  }
+.technologyCard::after {
+  content: "";
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: rgba(114, 217, 159, 0.08);
+  filter: blur(8px);
 }
 
-.tecnology {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
+.cardNumber {
+  color: #72d99f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
 }
 
-.tecnology > h1 {
-  font-size: 40px;
-  font-weight: 400;
+.technologyCard h2 {
+  min-height: 58px;
+  margin: 8px 0 20px;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.technologyCard h3 {
+  margin: 22px 0 10px;
+  color: #929b97;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: white;
-  margin-bottom: 20px;
 }
 
-.skills {
+.cardDescription {
+  min-height: 42px;
+  margin: -7px 0 20px;
+  color: #929b97;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.skillList {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: center; 
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.skills > svg {
-  padding-top: 30px;
-  padding-right: 20px;
-  width: 70px;
-  height: 70px;
-  color: #ffffff;
-  transition: color 0.5s;
+.skill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.025);
+  color: #d5d8d6;
+  font-size: 12px;
+  transition: border-color 0.2s ease, color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.skillsLow {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center;
+.skill:hover {
+  border-color: currentColor;
+  transform: translateY(-2px);
 }
 
-.skillsLow > svg {
-  padding-top: 30px;
-  padding-right: 20px;
-  width: 70px;
-  height: 70px;
-  color: #ffffff;
-  transition: color 0.5s;
+.skill svg {
+  width: 21px;
+  height: 21px;
+  color: #72d99f;
 }
 
-.html:hover {
-  color: #e34f26;
+.skill.java:hover,
+.skill.java:hover svg,
+.skill.maven:hover,
+.skill.maven:hover svg {
+  color: #f89820;
 }
 
-.css:hover {
-  color: #0095ff;
+.skill.spring:hover,
+.skill.spring:hover svg {
+  color: #6db33f;
 }
 
-.js:hover {
-  color: #f7df1e;
+.skill.springSecurity:hover,
+.skill.springSecurity:hover svg {
+  color: #6db33f;
 }
 
-.react:hover {
+.skill.hibernate:hover,
+.skill.hibernate:hover svg {
+  color: #bcae79;
+}
+
+.skill.react:hover,
+.skill.react:hover svg {
   color: #61dafb;
 }
 
-.mongo:hover {
+.skill.postgresql:hover,
+.skill.postgresql:hover svg {
+  color: #4169e1;
+}
+
+.skill.mongodb:hover,
+.skill.mongodb:hover svg {
   color: #47a248;
 }
 
-.node:hover {
-  color: #339933;
+.skill.docker:hover,
+.skill.docker:hover svg {
+  color: #2496ed;
 }
 
-.python:hover {
-  color: #3776ab;
+.skill.githubActions:hover,
+.skill.githubActions:hover svg {
+  color: #7b9cff;
 }
 
-@media screen and (max-width: 1300px) {
-  .titleAboutMe > img {
-    width: 153px;
-    height: 153px;
-  }
+.skill.swagger:hover,
+.skill.swagger:hover svg {
+  color: #85ea2d;
 }
 
-@media screen and (max-width: 1200px) {
-  .titleAboutMe > img {
-    width: 153px;
-    height: 153px;
-  }
-
-  .titleAbout {
-    width: auto;
-  }
-
-  .titleAbout > p {
-    width: 606px;
-  }
+.skill.junit:hover,
+.skill.junit:hover svg {
+  color: #25a162;
 }
 
-@media screen and (max-width: 980px) {
-  .about {
-    height: auto; 
+.skill.flyway:hover,
+.skill.flyway:hover svg {
+  color: #cc0200;
+}
+
+.skill.testcontainers:hover,
+.skill.testcontainers:hover svg {
+  color: #2496ed;
+}
+
+@media screen and (max-width: 1040px) {
+  .technologyGrid {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .personaSkills {
-    grid-template-columns: 1fr;
-    gap: 20px; 
+  .technologyCard:last-child {
+    grid-column: 1 / -1;
+    min-height: auto;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .titleAbout > p {
-    width: auto;
+  .about {
+    padding: 50px 20px 70px;
+  }
+
+  .profileFrame {
+    width: 126px;
+    height: 126px;
+  }
+
+  .titleAbout {
+    margin-bottom: 55px;
+  }
+
+  .titleAbout p {
     font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 440px) {
-  .softSkills > h1,
-  .tecnology > h1 {
-    font-size: 30px;
+    line-height: 1.7;
   }
 
-  .softSkills > h2 {
-    font-size: 18px;
+  .technologyGrid {
+    grid-template-columns: 1fr;
   }
 
-  .skills > svg,
-  .skillsLow > svg {
-    width: 50px;
-    height: 50px;
+  .technologyCard,
+  .technologyCard:last-child {
+    grid-column: auto;
+    min-height: auto;
+    padding: 25px;
   }
 
-  .titleAboutMe > img {
-    padding-bottom: 10px;
-  }
-}
-
-@media screen and (max-width: 390px) {
-
-  .titleAbout > p {
-    margin: 0;
-  }
-
-  .personaSkills {
-    height: auto;
+  .technologyCard h2 {
+    min-height: 0;
   }
 }
